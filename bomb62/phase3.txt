@@ -1,0 +1,81 @@
+   0x0000555555555c8b <+0>:	push   %rbx
+   0x0000555555555c8c <+1>:	sub    $0x10,%rsp
+   0x0000555555555c90 <+5>:	mov    %fs:0x28,%rax
+   0x0000555555555c99 <+14>:	mov    %rax,0x8(%rsp)
+   0x0000555555555c9e <+19>:	xor    %eax,%eax
+   0x0000555555555ca0 <+21>:	movb   $0x41,0x3(%rsp)
+   0x0000555555555ca5 <+26>:	movl   $0x0,0x4(%rsp)
+   0x0000555555555cad <+34>:	lea    0x4(%rsp),%rcx
+   0x0000555555555cb2 <+39>:	lea    0x3(%rsp),%rdx
+   0x0000555555555cb7 <+44>:	lea    0x295e(%rip),%rsi        # 0x55555555861c
+   0x0000555555555cbe <+51>:	callq  0x555555555620
+   0x0000555555555cc3 <+56>:	mov    %eax,%esi		# Save 0x0 in %esi for format pass
+   0x0000555555555cc5 <+58>:	movsbl 0x3(%rsp),%ecx		# Set %ecx to 65
+   0x0000555555555cca <+63>:	sub    $0x41,%ecx		# Set %ecx to 0
+   0x0000555555555ccd <+66>:	mov    $0x38e38e39,%edx		# Set $edx to $0x38e38e39 (954437177)
+   0x0000555555555cd2 <+71>:	mov    %ecx,%eax		# Set %eax to 0
+   0x0000555555555cd4 <+73>:	imul   %edx			# Set %edx and %eax to 0
+   0x0000555555555cd6 <+75>:	sar    %edx			# Set %edx and %eax to 0
+   0x0000555555555cd8 <+77>:	mov    %ecx,%eax		# Set %eax to 0
+   0x0000555555555cda <+79>:	sar    $0x1f,%eax
+   0x0000555555555cdd <+82>:	mov    %edx,%ebx
+   0x0000555555555cdf <+84>:	sub    %eax,%ebx
+   0x0000555555555ce1 <+86>:	lea    (%rbx,%rbx,8),%eax
+   0x0000555555555ce4 <+89>:	sub    %eax,%ecx
+   0x0000555555555ce6 <+91>:	mov    %ecx,%ebx
+   0x0000555555555ce8 <+93>:	cmp    $0x1,%esi
+   0x0000555555555ceb <+96>:	jbe    0x555555555d08 <phase3+125>
+   0x0000555555555ced <+98>:	cmp    $0x8,%ebx
+   0x0000555555555cf0 <+101>:	ja     0x555555555daa <phase3+287>
+   0x0000555555555cf6 <+107>:	mov    %ebx,%ebx
+   0x0000555555555cf8 <+109>:	lea    0x2925(%rip),%rdx        # 0x555555558624
+   0x0000555555555cff <+116>:	movslq (%rdx,%rbx,4),%rax
+   0x0000555555555d03 <+120>:	add    %rdx,%rax
+   0x0000555555555d06 <+123>:	jmpq   *%rax
+   0x0000555555555d08 <+125>:	mov    $0x0,%eax
+   0x0000555555555d0d <+130>:	callq  0x5555555566f9 <explode_bomb>
+   0x0000555555555d12 <+135>:	jmp    0x555555555ced <phase3+98>
+   0x0000555555555d14 <+137>:	mov    $0x6,%edi
+   0x0000555555555d19 <+142>:	callq  0x555555555c39 <getnu2mber>
+   0x0000555555555d1e <+147>:	xor    0x4(%rsp),%eax
+   0x0000555555555d22 <+151>:	test   $0xfff,%eax
+   0x0000555555555d27 <+156>:	jne    0x555555555dbe <phase3+307>
+   0x0000555555555d2d <+162>:	mov    0x8(%rsp),%rax
+   0x0000555555555d32 <+167>:	xor    %fs:0x28,%rax
+   0x0000555555555d3b <+176>:	jne    0x555555555dcd <phase3+322>
+   0x0000555555555d41 <+182>:	add    $0x10,%rsp
+   0x0000555555555d45 <+186>:	pop    %rbx
+   0x0000555555555d46 <+187>:	retq   
+   0x0000555555555d47 <+188>:	mov    $0xe,%edi
+   0x0000555555555d4c <+193>:	callq  0x555555555c39 <getnumber>
+   0x0000555555555d51 <+198>:	jmp    0x555555555d1e <phase3+147>
+   0x0000555555555d53 <+200>:	mov    $0x1,%edi
+   0x0000555555555d58 <+205>:	callq  0x555555555c39 <getnumber>
+   0x0000555555555d5d <+210>:	jmp    0x555555555d1e <phase3+147>
+   0x0000555555555d5f <+212>:	mov    $0xb,%edi
+   0x0000555555555d64 <+217>:	callq  0x555555555c39 <getnumber>
+   0x0000555555555d69 <+222>:	jmp    0x555555555d1e <phase3+147>
+   0x0000555555555d6b <+224>:	mov    $0x4,%edi
+   0x0000555555555d70 <+229>:	callq  0x555555555c39 <getnumber>
+   0x0000555555555d75 <+234>:	jmp    0x555555555d1e <phase3+147>
+   0x0000555555555d77 <+236>:	mov    $0x9,%edi
+   0x0000555555555d7c <+241>:	callq  0x555555555c39 <getnumber>
+   0x0000555555555d81 <+246>:	jmp    0x555555555d1e <phase3+147>
+   0x0000555555555d83 <+248>:	mov    $0x3,%edi
+   0x0000555555555d88 <+253>:	callq  0x555555555c39 <getnumber>
+   0x0000555555555d8d <+258>:	jmp    0x555555555d1e <phase3+147>
+   0x0000555555555d8f <+260>:	mov    $0x2,%edi
+   0x0000555555555d94 <+265>:	callq  0x555555555c39 <getnumber>
+   0x0000555555555d99 <+270>:	jmp    0x555555555d1e <phase3+147>
+   0x0000555555555d9b <+272>:	mov    $0x7,%edi
+   0x0000555555555da0 <+277>:	callq  0x555555555c39 <getnumber>
+   0x0000555555555da5 <+282>:	jmpq   0x555555555d1e <phase3+147>
+   0x0000555555555daa <+287>:	mov    $0x0,%eax
+   0x0000555555555daf <+292>:	callq  0x5555555566f9 <explode_bomb>
+   0x0000555555555db4 <+297>:	mov    $0x0,%eax
+   0x0000555555555db9 <+302>:	jmpq   0x555555555d1e <phase3+147>
+   0x0000555555555dbe <+307>:	mov    $0x0,%eax
+   0x0000555555555dc3 <+312>:	callq  0x5555555566f9 <explode_bomb>
+   0x0000555555555dc8 <+317>:	jmpq   0x555555555d2d <phase3+162>
+   0x0000555555555dcd <+322>:	callq  0x5555555555b8
+
